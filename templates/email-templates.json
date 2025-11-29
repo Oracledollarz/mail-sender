@@ -1,0 +1,28 @@
+{
+    "templates": [
+        {
+            "id": "default",
+            "name": "Default Email Template",
+            "subject": "Hello {name}",
+            "html": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Email Template</title>\n</head>\n<body style=\"font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"background-color: #f4f4f4; padding: 20px; border-radius: 5px; margin-bottom: 20px;\">\n    <h1 style=\"color: #333; margin: 0;\">Hello {name}!</h1>\n  </div>\n  <div style=\"background-color: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 5px;\">\n    <p>Dear {name},</p>\n    <p>This is a personalized email sent to {email}.</p>\n    <p>Thank you for your attention.</p>\n    <p>Best regards,<br>Email Sender Team</p>\n  </div>\n</body>\n</html>"
+        },
+        {
+            "id": "newsletter",
+            "name": "Newsletter Template",
+            "subject": "Newsletter - {name}",
+            "html": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Newsletter</title>\n</head>\n<body style=\"font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 5px 5px 0 0;\">\n    <h1 style=\"margin: 0; font-size: 28px;\">Newsletter</h1>\n  </div>\n  <div style=\"background-color: #fff; padding: 30px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px;\">\n    <h2 style=\"color: #667eea;\">Hello {name}!</h2>\n    <p>Welcome to our newsletter. We're excited to share the latest updates with you.</p>\n    <p>Your email: {email}</p>\n    <div style=\"margin: 30px 0; padding: 20px; background-color: #f9f9f9; border-left: 4px solid #667eea;\">\n      <p style=\"margin: 0;\"><strong>Important Update:</strong> Stay tuned for more exciting news!</p>\n    </div>\n    <p>Thank you for being part of our community!</p>\n    <p>Best regards,<br><strong>Newsletter Team</strong></p>\n  </div>\n</body>\n</html>"
+        },
+        {
+            "id": "promotional",
+            "name": "Promotional Email Template",
+            "subject": "Special Offer for {name}!",
+            "html": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Promotional Email</title>\n</head>\n<body style=\"font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"background-color: #ff6b6b; color: white; padding: 30px; text-align: center; border-radius: 5px 5px 0 0;\">\n    <h1 style=\"margin: 0; font-size: 32px;\">🎉 Special Offer! 🎉</h1>\n  </div>\n  <div style=\"background-color: #fff; padding: 30px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px;\">\n    <h2 style=\"color: #ff6b6b;\">Hello {name}!</h2>\n    <p>We have an exclusive offer just for you!</p>\n    <div style=\"text-align: center; margin: 30px 0; padding: 30px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white; border-radius: 10px;\">\n      <h3 style=\"margin: 0 0 10px 0; font-size: 36px;\">50% OFF</h3>\n      <p style=\"margin: 0; font-size: 18px;\">Limited Time Offer</p>\n    </div>\n    <p>Don't miss out on this amazing opportunity, {name}!</p>\n    <p style=\"text-align: center; margin: 30px 0;\">\n      <a href=\"#\" style=\"background-color: #ff6b6b; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold;\">Claim Your Offer</a>\n    </p>\n    <p>Best regards,<br><strong>Promotions Team</strong></p>\n  </div>\n</body>\n</html>"
+        },
+        {
+            "id": "simple",
+            "name": "Simple Text Template",
+            "subject": "Message for {name}",
+            "html": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</head>\n<body style=\"font-family: Arial, sans-serif; line-height: 1.8; color: #333; max-width: 600px; margin: 0 auto; padding: 40px 20px;\">\n  <p>Dear {name},</p>\n  <p>I hope this message finds you well.</p>\n  <p>This is a simple, clean email template.</p>\n  <p>Best regards,<br>Sender</p>\n</body>\n</html>"
+        }
+    ]
+}

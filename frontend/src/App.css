@@ -1,0 +1,9 @@
+/* Custom styles for React Quill */
+.quill-editor .ql-container {
+  @apply min-h-[300px] rounded-b-lg;
+}
+
+.quill-editor .ql-toolbar {
+  @apply rounded-t-lg border-gray-300;
+}
+

@@ -1,0 +1,37 @@
+EXCEL TEMPLATE INSTRUCTIONS
+============================
+
+Create an Excel file (e.g., email_template.xlsx) with the following structure.
+Save it in the root directory of the project or anywhere accessible.
+
+REQUIRED COLUMNS:
+- email: Recipient email address (required)
+
+OPTIONAL COLUMNS (can be used as template variables):
+- name: Recipient name
+- company: Company name
+- phone: Phone number
+- address: Address
+- Any other columns you want to use
+
+EXAMPLE STRUCTURE:
+------------------
+| email              | name       | company    | phone        |
+|--------------------|------------|------------|--------------|
+| john@example.com   | John Doe   | Acme Inc   | 123-456-7890 |
+| jane@example.com   | Jane Smith | Tech Corp  | 987-654-3210 |
+
+USAGE:
+------
+1. Column names will be normalized to lowercase with underscores
+   Example: "First Name" becomes "first_name"
+   
+2. Use template variables in your email content:
+   - {email} - Always available
+   - {name} - If name column exists
+   - {company} - If company column exists
+   - {first_name} - If "First Name" column exists
+   - etc.
+
+3. Upload the Excel file in the Recipients section to import all recipients with their data.
+

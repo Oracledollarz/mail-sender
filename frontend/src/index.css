@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .quill-editor {
+    @apply bg-white rounded-lg;
+  }
+  
+  .quill-editor .ql-container {
+    @apply rounded-b-lg min-h-[300px];
+  }
+  
+  .quill-editor .ql-toolbar {
+    @apply rounded-t-lg border-gray-300;
+  }
+}
+
