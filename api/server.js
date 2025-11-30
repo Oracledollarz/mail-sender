@@ -12,13 +12,16 @@ const server = http.createServer(app);
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://mail-sender-orcin.vercel.app"
+  "https://mail-sender-orcin.vercel.app",
+  "https://mail-sender-lbu4.onrender.com"   // <== ADD THIS
 ];
 
 const io = new Server(server, {
   cors: {
     origin: allowedOrigins,
     methods: ["GET", "POST"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
   },
 });
 
@@ -28,24 +31,25 @@ app.use(
   cors({
     origin: allowedOrigins,
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Make io available to routes
+// Socket available to routes
 app.set("io", io);
 
 // Routes
 app.use("/api/email", emailRoutes);
 
-// Health check
+// Health
 app.get("/health", (req, res) => {
   res.json({ status: "ok", message: "Email API is running" });
 });
 
-// Socket.io connection
+// Socket listeners
 io.on("connection", (socket) => {
   logger.info(`Client connected: ${socket.id}`);
 
@@ -55,7 +59,6 @@ io.on("connection", (socket) => {
 });
 
 const PORT = process.env.PORT || 5000;
-
 server.listen(PORT, () => {
   logger.info(`Server running on port ${PORT}`);
 });
